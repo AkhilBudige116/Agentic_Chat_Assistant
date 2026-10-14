@@ -2,7 +2,7 @@ langchain==0.1.16
 langchain-community==0.0.32
 langchain-core==0.1.42
 langchain-groq==0.1.0
-langchain-classic==0.1.0
+langchain-classic
 requests==2.31.0
 tavily-python
 python-dotenv
