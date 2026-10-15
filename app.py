@@ -6,7 +6,7 @@ import streamlit as st
 
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from langchain.tools import tool
+from langchain_core.tools import tool
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_classic.agents import create_react_agent, AgentExecutor
 from langchain_core.prompts import PromptTemplate

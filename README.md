@@ -104,6 +104,14 @@ Open the local URL displayed in your terminal, usually:
 
 http://localhost:8501
 
+## Deploying on Render
+
+1. Push this repository to GitHub and create a new **Blueprint** in Render, selecting the repository. Render will read `render.yaml` to install dependencies and start Streamlit on the port Render provides.
+2. Add `GROQ_API_KEY`, `TAVILY_API_KEY`, and `WEATHERSTACK_API_KEY` when Render prompts for the Blueprint's unsynced environment variables.
+3. Deploy the service. You can also create a Render Web Service manually with build command `pip install -r requirements.txt` and start command `streamlit run app.py --server.address 0.0.0.0 --server.port $PORT --server.headless true`.
+
+Keep API keys in Render's Environment settings; do not add them to `render.yaml`, source control, or the deployed image. The application requires all three keys before it initializes its agent.
+
 ## 💬 Example Queries
 
 Try asking the assistant:
